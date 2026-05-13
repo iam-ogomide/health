@@ -265,7 +265,7 @@
 .story-label {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0;
   font-size: 0.9rem;
   font-weight: 600;
   color: #0a0a14;
@@ -287,6 +287,7 @@
   height: 2px;
   background: #0a0a14;
   flex-shrink: 0;
+  margin-right: 0.65rem;
 }
 
 /* bg-1 as background image on the left column */
@@ -369,7 +370,7 @@
 .platform-label {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0;
   font-size: 0.9rem;
   font-weight: 600;
   color: #0a0a14;
@@ -390,6 +391,7 @@
   height: 2px;
   background: #0a0a14;
   flex-shrink: 0;
+  margin-right: 0.65rem;
 }
 
 /* Cards grid */
@@ -677,7 +679,7 @@
 .cta-label {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -698,6 +700,7 @@
   height: 2px;
   background: #3b2fe0;
   flex-shrink: 0;
+  margin-right: 0.65rem;
 }
 
 .cta-heading {
@@ -789,7 +792,7 @@
   flex: 1;
 }
 
-.cta-card .btn {
+.cta-card .btn-wrap {
   margin-top: auto;
   align-self: flex-start;
 }

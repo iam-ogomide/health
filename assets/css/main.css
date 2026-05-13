@@ -31,3 +31,33 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* ── Split button: text pill + external circle ── */
+.btn-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+.btn-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #15124a;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  -webkit-text-stroke: 0.5px #fff;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+
+.btn-circle:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}

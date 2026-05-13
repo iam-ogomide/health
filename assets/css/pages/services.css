@@ -352,7 +352,7 @@
 .cta-label {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -372,6 +372,8 @@
   width: 34px;
   height: 2px;
   background: #3b2fe0;
+  flex-shrink: 0;
+  margin-right: 0.65rem;
 }
 
 .cta-heading {
@@ -461,7 +463,7 @@
   flex: 1;
 }
 
-.cta-card .btn {
+.cta-card .btn-wrap {
   margin-top: auto;
   align-self: flex-start;
 }
