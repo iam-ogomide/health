@@ -146,13 +146,10 @@
 
 /* ── HERO SECTION ── */
 .hero {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 390px 1fr;
-  align-items: flex-start;
   padding: 3rem 3rem 0;
   position: relative;
   z-index: 10;
+  min-height: calc(100vh - 100px);
 }
 
 /* Left column */
@@ -177,14 +174,15 @@
   align-self: flex-start;
   padding-left: 1rem;
   padding-top: 0.5rem;
+  margin-left: 400px;
 }
 
 .hero__heading h1 {
   font-size: clamp(3rem, 6.5vw, 5.5rem);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin: -60px 0 0;
 }
 
 .text-purple { color: #3b2fe0; }
@@ -193,11 +191,11 @@
 /* Pill bottle gif — bottom left, large & partially cropped */
 .hero__pill-bottle {
   position: absolute;
-  bottom: 0;
-  left: 1%;
-  width: 400px;
+  bottom: -80px;
+  left: -130px;
+  width: 1000px;
   pointer-events: none;
-  z-index: 15;
+  z-index: -15;
 }
 
 /* ════════════════════════════════
@@ -253,6 +251,10 @@
   text-transform: uppercase;
 }
 
+#about-label-text {
+  transition: opacity 0.1s ease;
+}
+
 .label-dot {
   width: 10px;
   height: 10px;
@@ -275,7 +277,8 @@
   color: #fff;
   line-height: 1.22;
   letter-spacing: -0.02em;
-  max-width: 380px;
+  max-width: 420px;
+  transition: opacity 0.1s ease;
 }
 
 .about-body {
@@ -283,6 +286,7 @@
   color: rgba(255,255,255,0.6);
   line-height: 1.7;
   max-width: 380px;
+  transition: opacity 0.1s ease;
 }
 
 /* Tabs */
@@ -338,6 +342,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 0.1s ease;
 }
 
 /* ── DIVIDER ── */
@@ -346,16 +351,18 @@
   position: relative;
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .divider-dot {
   position: absolute;
-  top: -9px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #e84545;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 37px;
+  height: 37px;
   flex-shrink: 0;
+  transition: top 0.6s ease;
 }
 
 /* ── RIGHT COLUMN ── */
@@ -386,6 +393,17 @@
   gap: 1rem;
   flex: 1;
   min-height: 110px;
+}
+.team-card {
+  background: #0e1240;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  min-height: 110px;
+  color: white;
+}
+.team-card img {
+  margin: 0 0 20px;
+  width: 100%;
 }
 
 .feature-text h3 {
@@ -928,24 +946,37 @@
 /* ── Body area — sits below label with natural spacing ── */
 .hiw-body-area {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1.25rem;
   margin-top: auto; /* label stays top, heading fills remaining space */
   max-width: 48%;
+  min-height: 350px;
 }
 
 /* ── Heading with vertical bar ── */
 .hiw-heading-block {
   display: flex;
-  align-items: stretch;
-  gap: 1.25rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hiw-vbar-track {
+  position: relative;
+  width: 3.5px;
+  align-self: stretch;
+  flex-shrink: 0;
 }
 
 .hiw-vbar {
-  width: 3.5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
   background: #0d0f3c;
   border-radius: 2px;
-  flex-shrink: 0;
+  transition: height 0.4s ease;
 }
 
 .hiw-heading {
@@ -955,6 +986,11 @@
   line-height: 0.95;
   letter-spacing: -0.03em;
   margin: 0;
+  transition: opacity 0.1s ease;
+}
+
+.hiw-fade-out {
+  opacity: 0;
 }
 
 /* ── Description text ── */
@@ -963,8 +999,7 @@
   color: #2a2a3e;
   line-height: 1.7;
   max-width: 360px;
-  /* align with heading text (vbar width + gap) */
-  padding-left: calc(3.5px + 1.25rem);
+  transition: opacity 0.1s ease;
 }
 
 /* ════════════════════════════════
@@ -1279,6 +1314,56 @@
 }
 
 /* ══════════════════════════════════════
+   RESPONSIVE — tablet (≤ 1200px)
+══════════════════════════════════════ */
+@media (max-width: 1200px) {
+
+  .hero__heading h1 {
+    margin: -20px 0 0;
+  }
+
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — tablet (≤ 992px)
+══════════════════════════════════════ */
+@media (max-width: 992px) {
+  .hero__subtitle {
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 220px;
+  }
+  .hero__heading {
+    align-self: flex-start;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    margin-left: 0;
+    float: right;
+  }
+  .hero__heading { padding-left: 0; }
+  .hero__heading h1 { 
+    margin: 50px 0 0;
+    font-size: 48px; 
+    line-height: 78px;
+  }
+  .hero__pill-bottle {
+    position: absolute;
+    bottom: 30px;
+    left: -30px;
+    width: 1300px;
+    pointer-events: none;
+    z-index: -15;
+    scale: 1.2;
+  }
+  .about-card {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+}
+
+/* ══════════════════════════════════════
    RESPONSIVE — tablet (≤ 960px)
 ══════════════════════════════════════ */
 @media (max-width: 960px) {
@@ -1304,19 +1389,50 @@
     gap: 2rem;
     padding-bottom: 2rem;
   }
-  .hero__pill-bottle { display: none; }
   .hero__corner-pill { width: 180px; }
-  .hero__heading { padding-left: 0; }
-  .hero__heading h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); }
 
   /* ── About ── */
   .about-section { padding: 3.5rem 1.5rem; }
   .about-card { grid-template-columns: 1fr; min-height: auto; }
-  .about-divider { display: none; }
+  .about-divider {
+    width: 100%;
+    height: 40px;
+    background: none;
+    position: relative;
+  }
+
+  .about-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .divider-dot {
+    top: 50%;
+    left: 10%;
+    transition: left 0.6s ease;
+  }
   .about-left { padding: 2.5rem 2rem 1.5rem; }
   .about-right { padding: 1.5rem 2rem 2.5rem; }
   .about-heading { font-size: 1.7rem; }
   .about-tabs { gap: 1.5rem; }
+  .feature-num {display: none }
+  .about__stethoscope {
+    position: absolute;
+    bottom: 30px;
+    left: -30px;
+    width: 200px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;
+    transform: scaleX(-1);
+    rotate: 30deg
+  }
 
   /* ── Mission ── */
   .mission-section { padding: 3rem 1.5rem 4rem; }
@@ -1327,6 +1443,13 @@
     padding: 1.5rem 0;
   }
   .mission-word { font-size: 2.8rem; }
+  .mission-desc {
+    font-size: 0.82rem;
+    color: #1e2060;
+    line-height: 1.55;
+    max-width: 100%;
+    flex-shrink: 1;
+  }
   .pill-img { width: 70px; }
 
   /* ── Features ── */
@@ -1384,9 +1507,13 @@
   /* ── Hero ── */
   .page-hero { min-height: auto; }
   .hero { padding: 1.5rem 1.25rem 2rem; }
-  .hero__heading h1 { font-size: 2.1rem; }
   .hero__subtitle { font-size: 0.9rem; }
   .hero__corner-pill { width: 130px; }
+
+  .hero__heading h1 { 
+    font-size: 24px; 
+    line-height: 38px;
+  }
 
   /* ── About ── */
   .about-section { padding: 2.5rem 1.25rem; }
@@ -1395,13 +1522,26 @@
   .about-heading { font-size: 1.5rem; }
   .about-tabs { gap: 1rem; flex-wrap: wrap; }
   .feature-card { min-height: auto; }
+  .team-card {
+    padding: 10px;
+  }
+  .team-card p {
+    font: 12px !important;
+  }
 
   /* ── Mission ── */
   .mission-section { padding: 2.5rem 1.25rem 3rem; }
   .mission-word { font-size: 2.2rem; }
-  .mission-pill-group { gap: 0.75rem; }
+  .mission-pill-group { 
+    gap: 0.75rem; 
+    box-sizing: border-box;
+  }
   .pill-img { width: 55px; }
-  .mission-desc { font-size: 0.75rem; max-width: 160px; }
+  .mission-desc { 
+    font-size: 0.75rem; 
+    max-width: 100%;
+    box-sizing: border-box; 
+  }
 
   /* ── Features ── */
   .features-section { padding: 2.5rem 1.25rem 3rem; }

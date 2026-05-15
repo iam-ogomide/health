@@ -94,10 +94,10 @@
         <div class="about-label">
           <span class="label-dot"></span>
           <span class="label-line"></span>
-          <span>ABOUT US</span>
+          <span id="about-label-text">ABOUT US</span>
         </div>
 
-        <h2 class="about-heading">Simplifying Healthcare, One Connection at a Time</h2>
+        <h2 class="about-heading" id="about-heading-text">Simplifying Healthcare, One Connection at a Time</h2>
 
         <p class="about-body">At Pharmira Health, we provide a completely unified vetted providers and pharmacies instantly.</p>
 
@@ -114,17 +114,30 @@
         </div>
 
         <div class="about-team-photo">
-          <img src="assets/images/aboutV1.jpg" alt="Pharmira Health Team" />
+          <img src="assets/images/aboutV1.jpg" alt="Pharmira Health Team" id="about-team-img" />
         </div>
 
       </div>
 
       <!-- ── DIVIDER ── -->
       <div class="about-divider">
-        <div class="divider-dot"></div>
+        <svg id="divider-dot" class="divider-dot" width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_f_130_962)">
+            <circle cx="18.5" cy="18.5" r="14.5" fill="#EDCECE"/>
+          </g>
+          <circle cx="19" cy="19" r="10" fill="#B63232"/>
+          <defs>
+            <filter id="filter0_f_130_962" x="0" y="0" width="37" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_130_962"/>
+            </filter>
+          </defs>
+        </svg>
       </div>
 
       <!-- ── RIGHT COLUMN ── -->
+       <!-- This should show when label is ABOUT US  -->
       <div class="about-right">
 
         <p class="who-label">WHO WE ARE</p>
@@ -153,6 +166,43 @@
           <span class="feature-num">03</span>
         </div>
 
+      </div>
+
+       <!-- This should show when label is OUR VALUES  -->
+      <div class="about-right">
+
+        <div class="feature-card">
+          <div class="feature-text">
+            <h3>Quality</h3>
+            <p>Healthcare should never be a privilege. We design every feature with the under-served patient in mind.</p>
+          </div>
+          <span class="feature-num">01</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-text">
+            <h3>Integrity</h3>
+            <p>In health, trust us everything. We handle patient data, prescriptions, and providers with the highest accountability.</p>
+          </div>
+          <span class="feature-num">02</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-text">
+            <h3>Innovation</h3>
+            <p>We ship fast, learn faster, and never settle for “good enough” when lives and health are at stake.</p>
+          </div>
+          <span class="feature-num">03</span>
+        </div>
+
+      </div>
+
+       <!-- This should show when label is OUR TEAM  -->
+      <div class="about-right">
+        <div class="team-card">
+          <img src="assets/images/team.png" alt="" />
+          <p>PHARMACY | ENGINEERING | PRODUCT (UX) | MEDICINE | MARKETING | OPS (LOGISTICS) | COMPLIANCE</p>
+        </div>
       </div>
 
     </div>
@@ -428,12 +478,13 @@
       <div class="hiw-body-area">
 
         <!-- Heading with left vertical bar -->
-        <div class="hiw-heading-block">
+        <div class="hiw-vbar-track">
           <span class="hiw-vbar"></span>
-          <h2 class="hiw-heading">Search &amp;<br />Consult</h2>
         </div>
-
-        <p class="hiw-desc">Find medications, doctors, or pharmacies near you instantly.</p>
+        <div class="hiw-heading-block">
+          <h2 class="hiw-heading" id="hiw-rotating-heading">Search & Consult</h2>
+          <p class="hiw-desc" id="hiw-rotating-desc">Find medications, doctors, or pharmacies near you instantly.</p>
+        </div>
 
       </div>
 

@@ -1,3 +1,114 @@
+// HIW rotating text
+(function () {
+  const steps = [
+    { heading: 'Search & Consult',  desc: 'Find medications, doctors, or pharmacies near you instantly.' },
+    { heading: 'Consult Online',    desc: 'Get medical consultations via secure video or chats.' },
+    { heading: 'Manage Dosages',    desc: 'Track prescriptions, dosages, and health records.' },
+    { heading: 'Receive Supply',    desc: 'Get medications delivered or pick up nearby.' },
+  ];
+
+  const headingEl = document.getElementById('hiw-rotating-heading');
+  const descEl    = document.getElementById('hiw-rotating-desc');
+  const vbarEl    = document.querySelector('.hiw-vbar');
+
+  if (!headingEl || !descEl) return;
+
+  const vbarHeights = ['25%', '50%', '75%', '100%'];
+
+  let index = 0;
+
+  function rotate() {
+    index = (index + 1) % steps.length;
+    const { heading, desc } = steps[index];
+
+    [headingEl, descEl].forEach(el => el.classList.add('hiw-fade-out'));
+    if (vbarEl) vbarEl.style.height = vbarHeights[index];
+
+    setTimeout(() => {
+      headingEl.textContent = heading;
+      descEl.textContent    = desc;
+      [headingEl, descEl].forEach(el => el.classList.remove('hiw-fade-out'));
+    }, 100);
+  }
+
+  setInterval(rotate, 3000);
+})();
+
+// About section rotating content
+(function () {
+  const steps = [
+    { label: 'ABOUT US',   heading: 'Simplifying Healthcare, One Connection at a Time', tab: 'who',    img: 'assets/images/aboutV1.jpg', dotPos: '10%' },
+    { label: 'OUR VALUES', heading: 'What drives every decision we make.',               tab: 'values', img: 'assets/images/aboutV1.jpg', dotPos: '50%' },
+    { label: 'OUR TEAM',   heading: 'Built by people who care deeply.',                  tab: 'team',   img: 'assets/images/aboutV1.jpg', dotPos: '90%' },
+  ];
+
+  const labelEl   = document.getElementById('about-label-text');
+  const headingEl = document.getElementById('about-heading-text');
+  const imgEl     = document.getElementById('about-team-img');
+  const dotEl     = document.getElementById('divider-dot');
+  const tabs      = document.querySelectorAll('.about-tab');
+  const rightCols = document.querySelectorAll('.about-right');
+
+  if (!labelEl || !headingEl || !imgEl) return;
+
+  // Stack all right panels into the same grid cell; hide inactive ones
+  rightCols.forEach((col, i) => {
+    col.style.gridColumn    = '3';
+    col.style.gridRow       = '1';
+    col.style.transition    = 'opacity 0.1s ease';
+    col.style.opacity       = i === 0 ? '1' : '0';
+    col.style.display       = i === 0 ? '' : 'none';
+    col.style.pointerEvents = i === 0 ? '' : 'none';
+  });
+
+  const FADE = 100;
+  let index = 0;
+
+  function rotateAbout() {
+    const prevIndex = index;
+    index = (index + 1) % steps.length;
+    const { label, heading, tab, img, dotPos } = steps[index];
+
+    const els = [labelEl, headingEl, imgEl];
+    els.forEach(el => (el.style.opacity = '0'));
+    if (rightCols[prevIndex]) rightCols[prevIndex].style.opacity = '0';
+
+    if (dotEl) {
+      if (window.innerWidth <= 960) {
+        dotEl.style.top  = '50%';
+        dotEl.style.left = dotPos;
+      } else {
+        dotEl.style.left = '50%';
+        dotEl.style.top  = dotPos;
+      }
+    }
+
+    setTimeout(() => {
+      labelEl.textContent   = label;
+      headingEl.textContent = heading;
+      imgEl.src             = img;
+
+      tabs.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tab);
+      });
+
+      if (rightCols[prevIndex]) {
+        rightCols[prevIndex].style.display       = 'none';
+        rightCols[prevIndex].style.pointerEvents = 'none';
+      }
+      if (rightCols[index]) {
+        rightCols[index].style.display       = '';
+        rightCols[index].style.opacity       = '1';
+        rightCols[index].style.pointerEvents = '';
+      }
+
+      els.forEach(el => (el.style.opacity = '1'));
+    }, FADE);
+  }
+
+  setInterval(rotateAbout, 3000);
+})();
+
 // Services card slider
 (function () {
   const slider  = document.querySelector('.services-slider');
