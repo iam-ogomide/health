@@ -123,6 +123,16 @@
     display: flex;
   }
 
+  /* Hide logo text — only icon shows on mobile */
+  .nav-logo-name {
+    display: none;
+  }
+
+  /* Hide desktop nav links on mobile */
+  .nav-links {
+    display: none;
+  }
+
   /* Hide the desktop CTA button on mobile */
   .navbar > .btn-wrap {
     display: none;
