@@ -465,7 +465,7 @@
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  padding: 0.6rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
@@ -664,7 +664,11 @@
   opacity: 0;
 }
 
-/* Secondary icon badge — bottom-right on hover */
+.feat-card:hover .feat-icon-bg {
+  opacity: 1;
+}
+
+/* Secondary icon badge — bottom-right */
 .feat-icon-bg {
   position: absolute;
   bottom: 1.25rem;
@@ -678,7 +682,6 @@
   justify-content: center;
   color: #a89ef0;
   opacity: 0;
-  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
@@ -687,16 +690,12 @@
   height: 18px;
 }
 
-.feat-card:hover .feat-icon-bg {
-  opacity: 1;
-}
-
 /* ════════════════════════════════
    SERVICES SECTION
 ════════════════════════════════ */
 .services-section {
   background: #f8f7fd;
-  padding: 5rem 4rem 0;
+  padding: 5rem 4rem 5rem;
   /* no overflow:hidden — the .services-slider handles clipping */
 }
 

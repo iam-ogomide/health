@@ -22,7 +22,7 @@
         '<a href="' + base + 'index.html"' + a('home') + '>Home</a>' +
         '<a href="' + pg + 'about.html"' + a('about') + '>About</a>' +
         '<a href="' + pg + 'services.html"' + a('services') + '>Services</a>' +
-        '<a href="#">How it Works</a>' +
+        // '<a href="#">How it Works</a>' +
         '<a href="' + pg + 'contact.html"' + a('contact') + '>Contact</a>' +
       '</nav>' +
       '<div class="btn-wrap">' +

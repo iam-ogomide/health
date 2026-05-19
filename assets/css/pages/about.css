@@ -192,10 +192,10 @@
   font-size: clamp(2.8rem, 7vw, 6.5rem);
   font-weight: 800;
   color: #0a0a14;
-  line-height: 1.08;
+  line-height: 1.18;
   letter-spacing: -0.03em;
   max-width: 1100px;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 /* Two-column body: text left, image right */
@@ -226,9 +226,9 @@
 /* Big pill — bottom left corner */
 .belief__big-pill {
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   left: -30px;
-  width: 220px;
+  width: 320px;
   pointer-events: none;
   z-index: 1;
 }
@@ -266,8 +266,8 @@
   display: flex;
   align-items: center;
   gap: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: #0a0a14;
   position: relative;
   z-index: 2;
@@ -296,7 +296,7 @@
 .story-right {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .story-heading {
@@ -314,7 +314,8 @@
 .story-body {
   font-size: 1rem;
   color: #2a2a3e;
-  line-height: 1.8;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
 }
 
 .story-divider {
@@ -324,11 +325,11 @@
 }
 
 .story-quote {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
   font-style: italic;
   color: #0a0a14;
-  line-height: 1.45;
+  line-height: 1.55;
   letter-spacing: -0.01em;
 }
 
@@ -355,10 +356,10 @@
 }
 
 .platform-heading {
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   font-weight: 800;
   color: #0a0a14;
-  line-height: 1.08;
+  line-height: 1.3;
   letter-spacing: -0.03em;
   max-width: 620px;
 }
@@ -533,119 +534,104 @@
   margin-bottom: 4rem;
 }
 
-/* Fanned card row — cards rotate around their own center, like cards spread on a table */
-.vision-cards {
+/* Fanned card scene */
+.cards-scene {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  gap: 0;
   position: relative;
-  padding: 3rem 0 5rem;
+  min-height: 420px;
+  overflow: hidden;
 }
 
-.vision-card {
-  width: 310px;
-  min-height: 380px;
+.card {
+  width: 240px;
+  min-height: 320px;
   border-radius: 20px;
-  padding: 2rem 2rem 1.75rem;
+  padding: 28px 24px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  cursor: pointer;
   flex-shrink: 0;
-  margin-left: -120px; /* heavy overlap */
+  transition: transform 0.3s ease;
 }
 
-.vision-card:first-child {
-  margin-left: 0;
+.card:hover {
+  transform: rotate(0deg) translateY(-12px) !important;
+  z-index: 10 !important;
 }
 
-/* Card colours + rotations — origin stays at center (default) */
-.vision-card--1 {
-  background: #ccc8f0;
-  transform: rotate(-12deg);
-  z-index: 1;
+/* Light cards: dark text */
+.card.light .card-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(20, 15, 60, 0.78);
 }
 
-.vision-card--2 {
-  background: #a8a3f0;
-  transform: rotate(-5deg);
-  z-index: 2;
+.card.light .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: rgba(20, 15, 60, 0.88);
 }
 
-.vision-card--3 {
-  background: #8880e4;
-  transform: rotate(5deg);
-  z-index: 3;
+.card.light .card-title span {
+  display: block;
+  color: #3d32b8;
 }
 
-.vision-card--4 {
-  background: #7068d8;
-  transform: rotate(12deg);
-  z-index: 4;
+/* Dark cards: white text */
+.card.dark .card-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
 }
 
-/* Body text */
-.vision-card__body {
-  font-size: 0.88rem;
-  line-height: 1.7;
-  flex: 1;
-  margin-bottom: 2rem;
+.card.dark .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-.vision-card--1 .vision-card__body,
-.vision-card--2 .vision-card__body { color: #1a1a2e; }
+.card.dark .card-title span {
+  display: block;
+  color: #c4c0ff;
+}
 
-.vision-card--3 .vision-card__body,
-.vision-card--4 .vision-card__body { color: rgba(255, 255, 255, 0.88); }
-
-/* Footer: title + arrow */
-.vision-card__footer {
+.card-footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 12px;
 }
 
-.vision-card__title {
-  font-size: 1.05rem;
-  font-weight: 800;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-}
-
-.vision-card--1 .vision-card__title,
-.vision-card--2 .vision-card__title { color: #1a1a2e; }
-
-.vision-card--3 .vision-card__title,
-.vision-card--4 .vision-card__title { color: #fff; }
-
-/* Accent word */
-.vision-card--1 .vision-card__accent,
-.vision-card--2 .vision-card__accent { color: #3b2fe0; }
-
-.vision-card--3 .vision-card__accent,
-.vision-card--4 .vision-card__accent { color: #c8c4ff; }
-
-/* Arrow button */
-.vision-card__btn {
+.arrow-btn {
   width: 44px;
   height: 44px;
+  min-width: 44px;
   border-radius: 50%;
-  background: #1a1560;
-  color: #fff;
+  background: #3b31c4;
   border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  flex-shrink: 0;
-  transition: opacity 0.2s, transform 0.15s;
-  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
 }
 
-.vision-card__btn:hover {
-  opacity: 0.82;
-  transform: scale(1.06);
+.arrow-btn:hover {
+  background: #2c24a0;
+  transform: scale(1.08);
+}
+
+.arrow-btn svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* ══════════════════════════════════════
@@ -842,8 +828,8 @@
   .platform-card { min-height: auto; }
 
   .vision-section { padding: 4rem 1rem 6rem; }
-  .vision-cards { gap: 0; }
-  .vision-card { width: 240px; margin-left: -60px; min-height: 320px; }
+  .cards-scene { padding: 2rem 0.5rem; min-height: 340px; }
+  .card { width: 190px; min-height: 270px; padding: 20px 18px 18px; }
 
   .cta-section { padding: 4rem 2rem 4.5rem; }
   .cta-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -876,9 +862,9 @@
   .platform-card { padding: 2rem 1.5rem 1.75rem; }
 
   .vision-section { padding: 3rem 0.5rem 5rem; }
-  .vision-cards { flex-direction: column; align-items: center; }
-  .vision-card { width: 85%; max-width: 340px; margin-left: 0; margin-top: -1.5rem; transform: none !important; }
-  .vision-card:first-child { margin-top: 0; }
+  .cards-scene { flex-direction: column; align-items: center; min-height: auto; padding: 1.5rem 1rem; gap: 1rem; overflow: visible; }
+  .card { width: 85%; max-width: 340px; transform: none !important; }
+  .card:hover { transform: translateY(-8px) !important; }
 
   .cta-section { padding: 3rem 1.25rem 3.5rem; }
   .cta-cards { grid-template-columns: 1fr; }

@@ -193,10 +193,10 @@
 }
 
 .services-intro__heading {
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
   font-weight: 800;
   color: #0a0a14;
-  line-height: 1.1;
+  line-height: 1.35;
   letter-spacing: -0.03em;
   margin: 0;
 }
@@ -351,9 +351,9 @@
 
 .services-pharmacies__pill {
   position: absolute;
-  bottom: -80px;
+  bottom: -100px;
   left: 4rem;
-  width: 220px;
+  width: 340px;
   z-index: 10;
   pointer-events: none;
 }

@@ -11,30 +11,30 @@
 </head>
 <body>
 
-  <!-- ═══════════ SERVICES HERO ═══════════ -->
+  <!--  SERVICES HERO  -->
   <div class="services-hero">
 
     <div id="navbar-root"></div>
 
     <div class="services-hero__content">
-      <p class="services-hero__subtitle">Everything your medication journey needs. In one place.</p>
-      <h1 class="services-hero__heading">WHAT WE DO</h1>
+      <p class="services-hero__subtitle" data-animate data-hero>Everything your medication journey needs. In one place.</p>
+      <h1 class="services-hero__heading" data-animate data-hero data-delay="1">WHAT WE DO</h1>
     </div>
 
-    <div class="services-hero__image">
+    <div class="services-hero__image" data-animate data-hero data-delay="2">
       <img src="../assets/images/main-about.png" alt="Pharmira Health services" />
     </div>
 
   </div>
 
-  <!-- ═══════════ SERVICES CONTENT ═══════════ -->
+  <!--  SERVICES CONTENT  -->
   <section class="services-content">
 
     <div class="services-intro">
-      <h2 class="services-intro__heading">
+      <h2 class="services-intro__heading" data-animate>
         Everything you need. <span class="services-intro__highlight">Nothing you don't.</span>
       </h2>
-      <p class="services-intro__text">
+      <p class="services-intro__text" data-animate data-delay="1">
         Through verified pharmacies, real-time availability, and a platform built for simplicity,
         we help patients find, request, and receive their medication without the friction that's
         held healthcare back for too long.
@@ -46,7 +46,7 @@
     </div>
 
     <div class="services-cards-header">
-      <h3 class="services-cards-title">Care that fits in your pocket</h3>
+      <h3 class="services-cards-title" data-animate>Care that fits in your pocket</h3>
       <div class="btn-wrap">
         <a href="#" class="btn btn-primary">Get started</a>
         <a href="#" class="btn-circle">→</a>
@@ -126,7 +126,7 @@
 
   </section>
 
-  <!-- ═══════════ FOR PHARMACIES ═══════════ -->
+  <!--  FOR PHARMACIES  -->
   <section class="services-pharmacies">
 
     <div class="services-tabs">
@@ -134,7 +134,7 @@
     </div>
 
     <div class="services-cards-header">
-      <h3 class="services-cards-title">A quieter, faster way to serve.</h3>
+      <h3 class="services-cards-title" data-animate>A quieter, faster way to serve.</h3>
       <div class="btn-wrap">
         <a href="#" class="btn btn-primary">Get started</a>
         <a href="#" class="btn-circle">→</a>
@@ -194,22 +194,22 @@
 
   </section>
 
-  <!-- ═══════════ CTA ═══════════ -->
+  <!--  CTA  -->
   <section class="cta-section">
 
     <div class="cta-inner">
 
-      <div class="cta-label">
+      <div class="cta-label" data-animate>
         <span class="cta-label__dot"></span>
         <span class="cta-label__line"></span>
         <span>GET READY</span>
       </div>
 
-      <h2 class="cta-heading">Ready to simplify your healthcare access?</h2>
+      <h2 class="cta-heading" data-animate data-delay="1">Ready to simplify your healthcare access?</h2>
 
-      <p class="cta-body">Join thousands of patients and pharmacies already using Pharma Health to streamline medication access, consult doctors, and manage health.</p>
+      <p class="cta-body" data-animate data-delay="2">Join thousands of patients and pharmacies already using Pharma Health to streamline medication access, consult doctors, and manage health.</p>
 
-      <ul class="cta-checks">
+      <ul class="cta-checks" data-animate data-delay="3">
         <li>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#3b2fe0" fill-opacity="0.15"/><path d="M5.5 9L7.5 11L12.5 6.5" stroke="#3b2fe0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Free to get started, no credit card required
@@ -220,7 +220,7 @@
         </li>
       </ul>
 
-      <div class="cta-buttons">
+      <div class="cta-buttons" data-animate data-delay="4">
         <div class="btn-wrap">
           <a href="#" class="btn btn-dark">Book an appointment</a>
           <a href="#" class="btn-circle">→</a>
@@ -240,5 +240,6 @@
   <script src="../assets/js/pages/services.js"></script>
   <script src="../assets/js/components/navbar.js"></script>
   <script src="../assets/js/components/footer.js"></script>
+  <script src="../assets/js/components/animations.js"></script>
 </body>
 </html>
