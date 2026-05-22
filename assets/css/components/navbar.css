@@ -123,9 +123,12 @@
     display: flex;
   }
 
-  /* Hide logo text — only icon shows on mobile */
+  /* Show logo name beside icon on mobile */
   .nav-logo-name {
-    display: none;
+    display: inline;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1454;
   }
 
   /* Hide desktop nav links on mobile */
@@ -144,4 +147,11 @@
   .contact-hero .nav-hamburger {
     color: rgba(255, 255, 255, 0.9);
   }
+}
+
+/* White logo name on dark-background pages (all screen sizes) */
+.about-hero .nav-logo-name,
+.services-hero .nav-logo-name,
+.contact-hero .nav-logo-name {
+  color: #fff;
 }

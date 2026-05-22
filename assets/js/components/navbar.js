@@ -16,13 +16,13 @@
     '<header class="navbar">' +
       '<div class="nav-logo">' +
         '<img src="' + base + 'assets/images/top-logo.png" alt="Pharmira Health" />' +
-        '<span class="nav-logo-name">Pharmira Health</span>' +
+        '<span class="nav-logo-name">Pharmira<br/>Health</span>' +
       '</div>' +
       '<nav class="nav-links">' +
         '<a href="' + base + 'index.html"' + a('home') + '>Home</a>' +
         '<a href="' + pg + 'about.html"' + a('about') + '>About</a>' +
         '<a href="' + pg + 'services.html"' + a('services') + '>Services</a>' +
-        // '<a href="#">How it Works</a>' +
+        '<a href="' + pg + 'task.html"' + a('task') + '>Task</a>' +
         '<a href="' + pg + 'contact.html"' + a('contact') + '>Contact</a>' +
       '</nav>' +
       '<div class="btn-wrap">' +
