@@ -26,8 +26,8 @@
         '<a href="' + pg + 'contact.html"' + a('contact') + '>Contact</a>' +
       '</nav>' +
       '<div class="btn-wrap">' +
-        '<a href="#" class="btn btn-dark">Where to start</a>' +
-        '<a href="#" class="btn-circle">→</a>' +
+        '<a href="' + pg + 'get-started.html" class="btn btn-dark">Where to start</a>' +
+        '<a href="' + pg + 'get-started.html" class="btn-circle">→</a>' +
       '</div>' +
       '<button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">' +
         '<svg class="ham-open" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
@@ -46,8 +46,8 @@
         '<a href="#" class="nav-mobile-link">How it works</a>' +
         '<a href="' + pg + 'contact.html" ' + ma('contact') + '>Contact</a>' +
         '<div class="nav-mobile-cta-row">' +
-          '<a href="#" class="nav-mobile-cta">Where to start</a>' +
-          '<a href="#" class="nav-mobile-cta-circle">→</a>' +
+          '<a href="' + pg + 'get-started.html" class="nav-mobile-cta">Where to start</a>' +
+          '<a href="' + pg + 'get-started.html" class="nav-mobile-cta-circle">→</a>' +
         '</div>' +
       '</div>' +
     '</header>';

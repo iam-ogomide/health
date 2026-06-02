@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started | PharmiraHealth</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/pages/get-started.css" />
+</head>
+<body>
+
+  <div class="gs-page">
+
+    <header class="gs-logo-bar">
+      <a href="../index.html" class="gs-logo">
+        <img src="../assets/images/top-logo.png" alt="Pharmira Health" />
+        <span class="gs-logo-name">Pharmira<br/>Health</span>
+      </a>
+    </header>
+
+    <div class="gs-header">
+      <h2 class="gs-header__title">Get started with Smarter Medication in Minutes!</h2>
+      <p class="gs-header__subtitle">Tell us a little about yourself and we'll tailor the experience to your needs.</p>
+    </div>
+
+    <div class="gs-main">
+      <div class="gs-card">
+
+        <!-- Progress bar -->
+        <div class="gs-progress">
+          <div class="gs-progress__track">
+            <div class="gs-progress__seg" data-seg="1"></div>
+            <div class="gs-progress__seg" data-seg="2"></div>
+            <div class="gs-progress__seg" data-seg="3"></div>
+            <div class="gs-progress__seg" data-seg="4"></div>
+            <div class="gs-progress__seg" data-seg="5"></div>
+          </div>
+          <span class="gs-progress__label" id="gs-step-label">1/5</span>
+        </div>
+
+        <!-- ── STEP 1: shared ── -->
+        <div class="gs-step is-active" data-step="1">
+          <h2 class="gs-question">Who are you?</h2>
+          <div class="gs-options">
+            <button class="gs-option gs-option--selected" data-value="patient">
+              <span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect width="20" height="20" rx="5" fill="#3b2fe0" fill-opacity="0.18"/><path d="M5 10.5L8.5 14L15 7" stroke="#3b2fe0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              I'm a Patient
+            </button>
+            <button class="gs-option" data-value="pharmacy">
+              <span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>
+              I'm a Pharmacy
+            </button>
+            <button class="gs-option" data-value="caregiver">
+              <span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>
+              I'm a Caregiver
+            </button>
+            <button class="gs-option" data-value="provider">
+              <span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>
+              I'm a Healthcare provider
+            </button>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════════
+             PATIENT FLOW — steps 2-5
+             ══════════════════════════════════ -->
+        <div class="gs-step" data-step="2" data-flow="patient">
+          <h2 class="gs-question">How often do you struggle to keep track of your medications?</h2>
+          <div class="gs-options">
+            <button class="gs-option" data-value="never"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Never</button>
+            <button class="gs-option" data-value="occasionally"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Occasionally</button>
+            <button class="gs-option" data-value="frequently"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Frequently</button>
+            <button class="gs-option" data-value="daily-multiple"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>I manage multiple medications daily</button>
+          </div>
+        </div>
+
+        <div class="gs-step" data-step="3" data-flow="patient">
+          <h2 class="gs-question">Have you ever been unable to find a prescribed medication?</h2>
+          <div class="gs-options">
+            <button class="gs-option" data-value="yes-many"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Yes, multiple times</button>
+            <button class="gs-option" data-value="yes-occasionally"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Yes, occasionally</button>
+            <button class="gs-option" data-value="rarely"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Rarely</button>
+            <button class="gs-option" data-value="never"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Never</button>
+          </div>
+        </div>
+
+        <div class="gs-step" data-step="4" data-flow="patient">
+          <h2 class="gs-question">What would make managing your medications easier?</h2>
+          <div class="gs-options">
+            <button class="gs-option" data-value="reminders"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Automatic reminders</button>
+            <button class="gs-option" data-value="nearby"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Finding nearby pharmacies with stock</button>
+            <button class="gs-option" data-value="delivery"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Medication delivery</button>
+            <button class="gs-option" data-value="all"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>All of the above</button>
+          </div>
+        </div>
+
+        <div class="gs-step" data-step="5" data-flow="patient">
+          <h2 class="gs-question gs-question--form">Ready to simplify how you access and manage your medications?</h2>
+          <div class="gs-form">
+            <div class="gs-field"><label class="gs-label" for="p-name">Full name*</label><input class="gs-input" type="text" id="p-name" placeholder="John Doe" autocomplete="name" /></div>
+            <div class="gs-field"><label class="gs-label" for="p-email">Email Address*</label><input class="gs-input" type="email" id="p-email" placeholder="@gmail.com" autocomplete="email" /></div>
+            <div class="gs-field"><label class="gs-label" for="p-phone">Phone Number</label><input class="gs-input" type="tel" id="p-phone" placeholder="+000 000 000 000" autocomplete="tel" /></div>
+            <div class="gs-field"><label class="gs-label" for="p-city">City/Location*</label><input class="gs-input" type="text" id="p-city" placeholder="Uk" autocomplete="address-level2" /></div>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════
+             PHARMACY / CAREGIVER / PROVIDER FLOW — steps 2-5
+             ══════════════════════════════════════════════════ -->
+        <div class="gs-step" data-step="2" data-flow="other">
+          <h2 class="gs-question">How do you currently manage medication requests from patients?</h2>
+          <div class="gs-options">
+            <button class="gs-option" data-value="phone"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Phone calls</button>
+            <button class="gs-option" data-value="whatsapp"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>WhatsApp</button>
+            <button class="gs-option" data-value="walkins"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Walk-ins</button>
+            <button class="gs-option" data-value="software"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Pharmacy software</button>
+          </div>
+        </div>
+
+        <div class="gs-step" data-step="3" data-flow="other">
+          <h2 class="gs-question">How often do patients contact you about medication availability?</h2>
+          <div class="gs-options">
+            <button class="gs-option" data-value="daily"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Daily</button>
+            <button class="gs-option" data-value="weekly"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Weekly</button>
+            <button class="gs-option" data-value="occasionally"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Occasionally</button>
+            <button class="gs-option" data-value="several-day"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Several times a day</button>
+          </div>
+        </div>
+
+        <div class="gs-step" data-step="4" data-flow="other">
+          <h2 class="gs-question">How would real-time medication visibility help your pharmacy?</h2>
+          <div class="gs-options">
+            <button class="gs-option" data-value="reduce-calls"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Reduce phone calls</button>
+            <button class="gs-option" data-value="increase-sales"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Increase sales</button>
+            <button class="gs-option" data-value="cx"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Improve customer experience</button>
+            <button class="gs-option" data-value="efficiency"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>Increase operational efficiency</button>
+            <button class="gs-option" data-value="all"><span class="gs-option__check"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="4" stroke="#c5bfe8" stroke-width="1.5"/></svg></span>All of the above</button>
+          </div>
+        </div>
+
+        <div class="gs-step" data-step="5" data-flow="other">
+          <h2 class="gs-question gs-question--form">Ready to connect your pharmacy to thousands of active patients?</h2>
+          <div class="gs-form">
+            <div class="gs-field"><label class="gs-label" for="o-name">Pharmacy Name*</label><input class="gs-input" type="text" id="o-name" placeholder="John Doe" /></div>
+            <div class="gs-field"><label class="gs-label" for="o-email">Business email Address*</label><input class="gs-input" type="email" id="o-email" placeholder="@hot.com" autocomplete="email" /></div>
+            <div class="gs-field"><label class="gs-label" for="o-phone">Phone Number</label><input class="gs-input" type="tel" id="o-phone" placeholder="+000 000 000 000" autocomplete="tel" /></div>
+            <div class="gs-field"><label class="gs-label" for="o-city">City/Location*</label><input class="gs-input" type="text" id="o-city" placeholder="Uk" autocomplete="address-level2" /></div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="gs-nav">
+          <button class="gs-btn-back" id="gs-back">&#8592;</button>
+          <div class="gs-btn-group">
+            <button class="gs-btn-next" id="gs-next">Next</button>
+            <button class="gs-btn-circle" id="gs-next-arrow">&#8594;</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../assets/js/pages/get-started.js"></script>
+</body>
+</html>
