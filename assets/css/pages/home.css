@@ -868,10 +868,10 @@
 ════════════════════════════════ */
 .hiw-section {
   background-color: #f6f5fb;
-  background-image: url('../../images/pour.png');
+  background-image: url('../../images/Pills-2.gif');
   background-repeat: no-repeat;
-  background-position: right top;
-  background-size: cover;
+  background-position: 160% 115%;
+  background-size: 92%;
   min-height: 78vh;
   position: relative;
   overflow: hidden;

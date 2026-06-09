@@ -355,3 +355,110 @@
     flex-shrink: 0;
   }
 }
+
+/* ════════════════════════════════
+   CONGRATULATIONS SCREEN
+════════════════════════════════ */
+.gs-congrats {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gs-congrats.is-visible {
+  display: flex;
+  animation: gs-congrats-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes gs-congrats-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.gs-congrats__confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.gs-confetti-piece {
+  position: absolute;
+  border-radius: 2px;
+  animation: confetti-drift linear infinite;
+}
+
+@keyframes confetti-drift {
+  0%   { transform: translateY(-20px) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(110vh)  rotate(720deg); opacity: 0.5; }
+}
+
+.gs-congrats__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 640px;
+  padding: 2rem;
+}
+
+.gs-congrats__title {
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 800;
+  color: #0a0a14;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.gs-congrats__body {
+  font-size: 1rem;
+  color: #555570;
+  line-height: 1.75;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.gs-congrats__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.gs-congrats__btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.gs-congrats__btn-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  background: #15124a;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gs-congrats__btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #15124a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}

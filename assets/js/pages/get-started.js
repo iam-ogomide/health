@@ -93,7 +93,7 @@
           }
         }
       }
-      window.location.href = '../index.html';
+      showCongrats();
       return;
     }
     goToStep(currentStep + 1);
@@ -108,6 +108,32 @@
   if (backBtn)  backBtn.addEventListener('click', function () {
     if (currentStep > 1) goToStep(currentStep - 1);
   });
+
+  function showCongrats() {
+    var screen    = document.getElementById('gs-congrats');
+    var container = document.getElementById('gs-confetti');
+    if (!screen) return;
+
+    screen.setAttribute('aria-hidden', 'false');
+    screen.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+
+    var colors = ['#f5c518', '#d4a017', '#c8860a', '#e8b84b', '#8b6914'];
+
+    for (var i = 0; i < 90; i++) {
+      var piece = document.createElement('div');
+      piece.className = 'gs-confetti-piece';
+      piece.style.width            = (Math.random() * 14 + 6) + 'px';
+      piece.style.height           = (Math.random() * 10 + 6) + 'px';
+      piece.style.left             = (Math.random() * 100) + '%';
+      piece.style.top              = (Math.random() * -20) + 'px';
+      piece.style.background       = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.animationDuration = (Math.random() * 4 + 4) + 's';
+      piece.style.animationDelay   = (Math.random() * 5) + 's';
+      piece.style.transform        = 'rotate(' + Math.floor(Math.random() * 360) + 'deg)';
+      container.appendChild(piece);
+    }
+  }
 
   selections[1] = 'patient';
   updateProgress();
