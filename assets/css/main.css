@@ -99,6 +99,7 @@ a {
   color: #fff;
   font-size: 1.1rem;
   font-weight: 700;
+  line-height: 1;
   -webkit-text-stroke: 0.5px #fff;
   flex-shrink: 0;
   text-decoration: none;

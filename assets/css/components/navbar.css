@@ -97,6 +97,7 @@
   background: rgba(196, 181, 245, 0.75);
   color: #fff;
   font-size: 1.2rem;
+  line-height: 1;
   flex-shrink: 0;
   text-decoration: none;
   transition: background 0.2s;
